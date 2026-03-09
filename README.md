@@ -1,16 +1,102 @@
-# React + Vite
+# 💰 CoinFlow — Sales Tracker App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fullstack sales tracking application built with React and Node.js. Designed for small business owners to track daily orders and monitor sales performance.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+> Coming soon
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🔐 User authentication (Register & Login)
+- 📦 Add, view, and delete orders
+- 📊 Dashboard with real-time stats:
+  - Today's total sales
+  - This month's total sales
+  - Most sold item
+- 🛡️ Protected routes (auth required)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+**Frontend**
+- React 19 + Vite
+- Tailwind CSS
+- React Router DOM
+- Axios
+
+**Backend**
+- Node.js + Express
+- MongoDB + Mongoose
+- JWT Authentication
+- bcryptjs
+
+---
+
+## 📁 Project Structure
+
+```
+coinflow/
+├── coinflow-server/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── config/
+│   └── server.js
+└── coinflow-client/
+    └── src/
+        ├── api/
+        ├── components/
+        ├── context/
+        └── pages/
+```
+
+---
+
+## ⚙️ Getting Started
+
+### Prerequisites
+- Node.js
+- MongoDB
+
+### Backend Setup
+```bash
+cd coinflow-server
+npm install
+# Create .env file:
+# MONGO_URI=your_mongodb_uri
+# JWT_SECRET=your_jwt_secret
+# PORT=5000
+npm run dev
+```
+
+### Frontend Setup
+```bash
+cd coinflow-client
+npm install
+npm run dev
+```
+
+---
+
+## 📡 API Endpoints
+
+| Method | Endpoint | Description | Auth |
+|--------|----------|-------------|------|
+| POST | `/api/auth/register` | Register user | ❌ |
+| POST | `/api/auth/login` | Login user | ❌ |
+| POST | `/api/orders` | Add order | ✅ |
+| GET | `/api/orders` | Get all orders | ✅ |
+| DELETE | `/api/orders/:id` | Delete order | ✅ |
+| GET | `/api/orders/stats/today` | Today's total | ✅ |
+| GET | `/api/orders/stats/month` | Month's total | ✅ |
+| GET | `/api/orders/stats/most-sold` | Most sold item | ✅ |
+
+---
+
+## 👤 Author
+
+**Adam Faiq** — [@Adamfaiq](https://github.com/Adamfaiq)
