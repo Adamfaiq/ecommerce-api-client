@@ -2,7 +2,7 @@
 
 React frontend for CoinFlow, a sales tracking app for small business owners.
 
-> 🔗 Backend repo: [coinflow-server](https://github.com/Adamfaiq/coinflow-server)
+> 🔗 Backend repo: [coinflow-server]([https://github.com/Adamfaiq/coinflow-server](https://github.com/Adamfaiq/ecommerce-api-server/tree/main))
 
 ## ✨ Features
 
